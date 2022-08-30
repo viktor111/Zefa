@@ -4,9 +4,9 @@ namespace Zefa.Domain.Models.Restaurants;
 
 public class Table : ValueObject 
 {
-    public string Name { get; } = default!;
+    public string Name { get; private set; } = default!;
 
-    public bool IsReserved { get; } = default!;
+    public bool IsReserved { get; private set; } = default!;
 
-    public int PlacesCount { get; } = default!;
+    public int PlacesCount { get; private set; } = default!;
 }

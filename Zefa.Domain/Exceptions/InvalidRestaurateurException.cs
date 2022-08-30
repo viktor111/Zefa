@@ -1,6 +1,13 @@
 namespace Zefa.Domain.Exceptions;
 
-public class InvalidRestaurateurException
+public class InvalidRestaurateurException: BaseDomainException
 {
-    
+    public InvalidRestaurateurException()
+    {
+    }
+
+    public InvalidRestaurateurException(string error)
+    {
+        this.Error = error;
+    }
 }

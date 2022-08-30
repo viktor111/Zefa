@@ -2,7 +2,7 @@ using Zefa.Domain.Common;
 
 namespace Zefa.Domain.Models.Restaurants;
 
-public class Table : Entity<Guid>
+public class Table : ValueObject 
 {
     public string Name { get; } = default!;
 

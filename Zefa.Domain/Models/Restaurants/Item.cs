@@ -1,6 +1,5 @@
 using Zefa.Domain.Common;
 using Zefa.Domain.Exceptions;
-using static Zefa.Domain.Models.ModelConstants;
 
 namespace Zefa.Domain.Models.Restaurants;
 
@@ -49,7 +48,8 @@ public class Item : ValueObject
         Guard.ForStringLength<InvalidItemException>(
             name,
             ModelConstants.Item.MinNameLength,
-            ModelConstants.Item.MaxNameLength);
+            ModelConstants.Item.MaxNameLength,
+            nameof(name));
     }
 
     private void ValidateDescription(string description)
@@ -58,7 +58,8 @@ public class Item : ValueObject
         Guard.ForStringLength<InvalidItemException>(
             description,
             ModelConstants.Item.MinDescriptionLength,
-            ModelConstants.Item.MaxDescriptionLength);
+            ModelConstants.Item.MaxDescriptionLength,
+            nameof(description));
     }
 
     private void ValidatePrice(decimal price)
@@ -66,7 +67,8 @@ public class Item : ValueObject
         Guard.AgainstOutOfRange<InvalidItemException>(
             price,
             ModelConstants.Item.MinPriceValue,
-            decimal.MaxValue);
+            decimal.MaxValue,
+            nameof(price));
     }
 
     private void Validate(string name, string description, decimal price)

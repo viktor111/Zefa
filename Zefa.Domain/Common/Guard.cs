@@ -1,3 +1,5 @@
+using System.Globalization;
+using System.Text.RegularExpressions;
 using Zefa.Domain.Exceptions;
 using Zefa.Domain.Models;
 
@@ -50,14 +52,34 @@ public static class Guard
 
         ThrowException<TException>($"{name} must be a valid URL.");
     }
-
-
+    
     public static void Against<TException>(object actualValue, object unexpectedValue, string name = "Value")
         where TException : BaseDomainException, new()
     {
         if (!actualValue.Equals(unexpectedValue)) return;
 
         ThrowException<TException>($"{name} must not be {unexpectedValue}.");
+    }
+
+    public static void AgainstDateRange<TException>(DateTime date, DateTime minDate, DateTime maxDate, string name = "Value")
+        where TException : BaseDomainException, new()
+    {
+        if (date > minDate && date < maxDate) return;
+        
+        ThrowException<TException>
+            ($"{name} must be between " +
+             $"${minDate.ToString(CultureInfo.InvariantCulture)} and " +
+             $"${maxDate.ToString(CultureInfo.InvariantCulture)}."); 
+    }
+
+    public static void AgainstRegex<TException>(string value, Regex regex, string name = "Value")
+        where TException : BaseDomainException, new()
+    {
+        var isMatch = regex.IsMatch(value);
+        
+        if(isMatch) return;
+        
+        ThrowException<TException>($"{name} must match pattern {regex}."); 
     }
 
     private static void ThrowException<TException>(string message)

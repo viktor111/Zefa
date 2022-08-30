@@ -5,7 +5,12 @@ namespace Zefa.Domain.Models.Restaurateurs;
 
 public class Restaurateur : Entity<Guid>, IAggregateRoot
 {
-    public PersonalInformation PersonalInformation { get; private set; } = default!;
+    private HashSet<Restaurant> restaurants;
 
-    public HashSet<Restaurant> Restaurants { get; private set; } = default!;
+    public Restaurateur(PersonalInformation personalInformation)
+    {
+        PersonalInformation = personalInformation;
+        restaurants = new HashSet<Restaurant>();
+    }
+    public PersonalInformation PersonalInformation { get; private set; } = default!;
 }

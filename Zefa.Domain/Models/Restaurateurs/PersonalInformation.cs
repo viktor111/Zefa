@@ -76,7 +76,7 @@ public class PersonalInformation : ValueObject
         Guard.ForStringLength<InvalidPersonalInformationException>(
             firstName,
             ModelConstants.PersonalInformation.MinFirstNameLength,
-            ModelConstants.PersonalInformation.MinFirstNameLength,
+            ModelConstants.PersonalInformation.MaxFirstNameLength,
             nameof(firstName));
     }
 

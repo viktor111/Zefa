@@ -51,7 +51,7 @@ public class ModelConstants
         public const int MaxEmailLength = 50;
         public static readonly Regex EmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
         public const int MinPhoneNumberLength = 5;
-        public const int MaxPhoneNumberLength = 5;
+        public const int MaxPhoneNumberLength = 15;
         public static readonly Regex PhoneNumberRegex = new Regex("^\\+?[1-9][0-9]{7,14}$");
         public static readonly DateTime MinBirthDate = new DateTime(1900, 1, 1);
         public static readonly DateTime MaxBirthDate = new DateTime(DateTime.Now.Year, 1, 1);

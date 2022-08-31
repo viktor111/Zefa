@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{24A6787F-6E18-4058-9D88-AF25C5F8870D}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Zefa.Domain PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Zefa.Domain/Models/Restaurants/Item.Fakes.cs">
+    <Files>
+      <File FileName="Zefa.Domain/Models/Restaurants/Item.cs" Line="1" Column="1" />
+      <File FileName="Zefa.Domain/Models/Restaurants/Item.Fakes.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Zefa" expanded="True">
+            <Node name="Zefa.Domain" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Restaurants" expanded="True">
+                  <Node name="Restaurant.Fakes.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

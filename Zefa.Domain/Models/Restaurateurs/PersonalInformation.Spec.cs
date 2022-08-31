@@ -12,9 +12,9 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedName = "Birol";
 
         //Act
-        var updatedName = "Birol";
         personalInformation.UpdateFirstName(updatedName);
 
         //Assert
@@ -26,9 +26,9 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedName = "Birol";
 
         //Act
-        var updatedName = "Birol";
         personalInformation.UpdateLastName(updatedName);
 
         //Assert
@@ -40,9 +40,9 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedEmail = "test1@gmail.com";
 
         //Act
-        var updatedEmail = "test@gmail.com";
         personalInformation.UpdateEmail(updatedEmail);
 
         //Assert
@@ -54,9 +54,9 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedPhoneNumber = "+359881231231";
 
         //Act
-        var updatedPhoneNumber = "+359881231234";
         personalInformation.UpdatePhoneNumber(updatedPhoneNumber);
 
         //Assert
@@ -68,9 +68,9 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedBirthDate = new DateTime(1988, 1, 3);
 
         //Act
-        var updatedBirthDate = new DateTime(1988, 1, 3);
         personalInformation.UpdateBirthDate(updatedBirthDate);
 
         //Assert
@@ -82,13 +82,13 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedName = "B";
 
         //Act
-        var updatedName = "B";
         Action act = () => personalInformation.UpdateFirstName(updatedName);
 
         //Assert
-        act.Should().Throw<InvalidPersonalInformationException>();
+        act.Should().ThrowExactly<InvalidPersonalInformationException>();
     }
     
     [Fact]
@@ -96,19 +96,18 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var updatedName = "B";
 
         //Act
-        var updatedName = "B";
         Action act = () => personalInformation.UpdateFirstName(updatedName);
 
         //Assert
-        act.Should().Throw<InvalidPersonalInformationException>();
+        act.Should().ThrowExactly<InvalidPersonalInformationException>();
     }
     
     [Theory]
     [InlineData("test^gmail.com")]
     [InlineData("")]
-    [InlineData(null)]
     public void ShouldThrowInvalidEmail(string email)
     {
         //Arrange
@@ -118,13 +117,12 @@ public class PersonalInformationSpec
         Action act = () => personalInformation.UpdateEmail(email);
 
         //Assert
-        act.Should().Throw<InvalidPersonalInformationException>();
+        act.Should().ThrowExactly<InvalidPersonalInformationException>();
     }
     
     [Theory]
     [InlineData("123")]
     [InlineData("")]
-    [InlineData(null)]
     public void ShouldThrowInvalidPhoneNumber(string phoneNumber)
     {
         //Arrange
@@ -134,7 +132,7 @@ public class PersonalInformationSpec
         Action act = () => personalInformation.UpdatePhoneNumber(phoneNumber);
 
         //Assert
-        act.Should().Throw<InvalidPersonalInformationException>();
+        act.Should().ThrowExactly<InvalidPersonalInformationException>();
     }
     
     [Theory]
@@ -144,12 +142,12 @@ public class PersonalInformationSpec
     {
         //Arrange
         var personalInformation = A.Dummy<PersonalInformation>();
+        var date = DateTime.Parse(birthDate);
 
         //Act
-        var date = DateTime.Parse(birthDate);
         Action act = () => personalInformation.UpdateBirthDate(date);
 
         //Assert
-        act.Should().Throw<InvalidPersonalInformationException>();
+        act.Should().ThrowExactly<InvalidPersonalInformationException>();
     }
 }

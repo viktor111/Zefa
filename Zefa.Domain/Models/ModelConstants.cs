@@ -20,8 +20,8 @@ public class ModelConstants
     {
         public const int MinNameLength = 2;
         public const int MaxNameLength = 20;
-        public const int MinDescriptionLength = 20;
-        public const int MaxDescriptionLength = 200;
+        public const int MinDescriptionLength = 2;
+        public const int MaxDescriptionLength = 1000;
         public const decimal MinPriceValue = 0m;
     }
     
@@ -36,9 +36,9 @@ public class ModelConstants
     public class Restaurant
     {
         public const int MinNameLength = 2;
-        public const int MaxNameLength = 20;
+        public const int MaxNameLength = 200;
         public const int MinAddressLength = 2;
-        public const int MaxAddressLength = 100;
+        public const int MaxAddressLength = 200;
     }
 
     public class PersonalInformation

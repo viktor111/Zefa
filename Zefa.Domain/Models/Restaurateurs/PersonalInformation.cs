@@ -92,7 +92,7 @@ public class PersonalInformation : ValueObject
 
     private void ValidateEmail(string email)
     {
-        Guard.AgainstEmptyString<InvalidPersonalInformationException>(email, nameof(email));
+        Guard.AgainstEmptyString<InvalidPersonalInformationException>(email, email);
         Guard.ForStringLength<InvalidPersonalInformationException>(
             email,
             ModelConstants.PersonalInformation.MinEmailLength,

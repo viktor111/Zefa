@@ -40,7 +40,7 @@ public class Table : ValueObject
     private void ValidateName(string name)
     {
         Guard.AgainstEmptyString<InvalidTableException>(name, nameof(name));
-        Guard.ForStringLength<InvalidItemException>(
+        Guard.ForStringLength<InvalidTableException>(
             name,
             ModelConstants.Table.MinNameLength,
             ModelConstants.Table.MaxNameLength,
@@ -49,7 +49,7 @@ public class Table : ValueObject
 
     public void ValidatePlacesCount(int placesCount)
     {
-        Guard.AgainstOutOfRange<InvalidItemException>(
+        Guard.AgainstOutOfRange<InvalidTableException>(
             placesCount,
             ModelConstants.Table.MinPlacesCountLength,
             ModelConstants.Table.MaxPlacesCountLength,

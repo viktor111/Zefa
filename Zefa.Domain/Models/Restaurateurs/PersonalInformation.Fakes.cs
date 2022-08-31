@@ -28,8 +28,8 @@ public class PersonalInformationFakes
             
             var firstName = faker.Random.String(10);
             var lastName = faker.Random.String(10);
-            var email = faker.Person.Email;
-            var phoneNumber = faker.Phone.PhoneNumber("+##########");
+            var email = "tes@asd.com";
+            var phoneNumber = "+359123456789";
             var birthDate = faker.Person.DateOfBirth;
 
                 var personalInformation = new Faker<PersonalInformation>()

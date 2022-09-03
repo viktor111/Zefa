@@ -8,6 +8,6 @@ public class InvalidPersonalInformationException: BaseDomainException
 
     public InvalidPersonalInformationException(string error)
     {
-        this.Error = error;
+        Error = error;
     }
 }

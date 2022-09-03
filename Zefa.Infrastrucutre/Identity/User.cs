@@ -1,11 +1,14 @@
-using Microsoft.AspNetCore.Identity;
 using Zefa.Domain.Exceptions;
 using Zefa.Domain.Models.Restaurateurs;
 
 namespace Zefa.Infrastrucutre.Identity;
 
-public class User : IdentityUser
+public class User 
 {
+   public Guid Id { get; set; }
+   
+   public string UserName { get; set; }
+   
    public Restaurateur? Restaurateur { get; set; }
 
    public void BecomeRestaurateur(Restaurateur restaurateur)

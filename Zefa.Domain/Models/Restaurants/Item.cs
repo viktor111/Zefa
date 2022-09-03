@@ -22,7 +22,7 @@ public class Item : ValueObject
 
     public string Description { get; private set; } = default!;
 
-    public decimal Price { get; private set; } = default!;
+    public decimal Price { get; private set; }
 
     public void UpdateName(string name)
     {

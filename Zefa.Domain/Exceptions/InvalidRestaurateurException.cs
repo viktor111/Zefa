@@ -8,6 +8,6 @@ public class InvalidRestaurateurException: BaseDomainException
 
     public InvalidRestaurateurException(string error)
     {
-        this.Error = error;
+        Error = error;
     }
 }

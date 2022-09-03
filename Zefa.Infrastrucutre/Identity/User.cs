@@ -9,6 +9,8 @@ public class User
    
    public string UserName { get; set; }
    
+   public string PasswordHash { get; set; }
+   
    public Restaurateur? Restaurateur { get; set; }
 
    public void BecomeRestaurateur(Restaurateur restaurateur)

@@ -8,6 +8,6 @@ public class InvalidResturantException: BaseDomainException
 
     public InvalidResturantException(string error)
     {
-        this.Error = error;
+        Error = error;
     }
 }

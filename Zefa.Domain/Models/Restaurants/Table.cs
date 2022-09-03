@@ -16,9 +16,9 @@ public class Table : ValueObject
     
     public string Name { get; private set; } = default!;
 
-    public bool IsReserved { get; private set; } = default!;
+    public bool IsReserved { get; private set; }
 
-    public int PlacesCount { get; private set; } = default!;
+    public int PlacesCount { get; private set; }
 
     public void UpdateName(string name)
     {
@@ -33,7 +33,7 @@ public class Table : ValueObject
 
     public void UpdatePlacesCount(int placesCount)
     {
-        this.ValidatePlacesCount(placesCount);
+        ValidatePlacesCount(placesCount);
         PlacesCount = placesCount;
     }
 

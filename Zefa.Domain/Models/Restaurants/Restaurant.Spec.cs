@@ -1,7 +1,6 @@
 using FakeItEasy;
 using FluentAssertions;
 using Xunit;
-using Zefa.Domain.Exceptions;
 
 namespace Zefa.Domain.Models.Restaurants;
 

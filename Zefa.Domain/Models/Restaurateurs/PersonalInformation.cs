@@ -38,7 +38,7 @@ public class PersonalInformation : ValueObject
 
     public string PhoneNumber { get; private set; } = default!;
 
-    public DateTime BirthDate { get; private set; } = default!;
+    public DateTime BirthDate { get; private set; }
 
     public void UpdateFirstName(string firstName)
     {

@@ -8,6 +8,6 @@ public class InvalidTableException: BaseDomainException
 
     public InvalidTableException(string error)
     {
-        this.Error = error;
+        Error = error;
     }
 }

@@ -8,6 +8,6 @@ public class InvalidItemException: BaseDomainException
 
     public InvalidItemException(string error)
     {
-        this.Error = error;
+        Error = error;
     }
 }

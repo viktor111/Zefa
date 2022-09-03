@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using Zefa.Domain.Common;
 using Zefa.Domain.Exceptions;
 

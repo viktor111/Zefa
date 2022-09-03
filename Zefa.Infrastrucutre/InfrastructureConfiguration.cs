@@ -11,4 +11,20 @@ public static class InfrastructureConfiguration
     {
         return serviceCollection;
     }
+    
+    public static IServiceCollection AddDataBase(
+        this IServiceCollection serviceCollection,
+        IConfiguration configuration)
+    {
+        return serviceCollection;
+    }
+    
+    public static IServiceCollection AddRepositories(
+        this IServiceCollection serviceCollection,
+        IConfiguration configuration)
+    {
+        return serviceCollection;
+    }
+    
+    
 }
